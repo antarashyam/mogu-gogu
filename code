@@ -1,4 +1,67 @@
-print("Hello World");
-print("Hello mogu");
-print("heyyyy");
-print("heyyyy");
+def chatbot_response(user_input):
+  """
+  This function simulates a chatbot response for basic phone features.
+  It uses if-else statements to provide simple instructions.
+
+  Args:
+    user_input: The user's input string.
+
+  Returns:
+    A string containing the chatbot's response.
+  """
+
+  if "increase volume" in user_input:
+    return "To increase the volume, press the volume up button on the side of your phone."
+  elif "save contact" in user_input:
+    return "To save a contact, open the phone app and tap the new contact button. Enter the contact's name and number, then tap save."
+  elif "silent" in user_input or "ringer" in user_input:
+    return "To switch between silent and ringer mode, press the side button until the ringer switch appears. Slide the switch to silent or ringer."
+  elif "increase font size" in user_input:
+    return "To increase the font size, go to Settings > Display & Brightness > Text Size. Use the slider to adjust the font size."
+  elif "hotspot" in user_input:
+    return "To turn on hotspot, go to Settings > Personal Hotspot. Turn on Personal Hotspot and set a password."
+  elif "face-id" in user_input or "fingerprint" in user_input:
+    return "To set up face-id or fingerprint, go to Settings > Face ID & Passcode or Touch ID & Passcode. Follow the on-screen instructions."
+  elif "brightness" in user_input:
+    return "To adjust brightness, swipe down from the top of the screen to open Control Center. Use the brightness slider to adjust the brightness."
+  elif "take ss" in user_input or "screenshot" in user_input:
+    return "To take a screenshot, press the side button and volume up button at the same time."
+  elif "wifi" in user_input:
+    return "To connect to wifi, go to Settings > Wi-Fi. Turn on Wi-Fi and select the network you want to connect to."
+  elif "airplane mode" in user_input:
+    return "To turn on airplane mode, go to Settings > Airplane Mode. Toggle the switch to turn on airplane mode."
+  elif "bluetooth" in user_input:
+    return "To turn on Bluetooth, go to Settings > Bluetooth. Turn on Bluetooth."
+  elif "torch" in user_input or "flashlight" in user_input:
+    return "To turn on the flashlight, open the flashlight app or swipe down from the top of the screen to open Control Center and tap the flashlight icon."
+  elif "download app" in user_input:
+    return "To download an app, open the App Store or Google Play Store. Search for the app you want to download and tap Get or Install."
+  elif "delete app" in user_input:
+    return "To delete an app, press and hold the app icon on the home screen until it starts to wiggle. Tap the X in the top left corner of the app icon, then tap Delete."
+  elif "change language" in user_input:
+    return "To change the language, go to Settings > General > Language & Region. Select the language you want to use."
+  elif "change wallpaper" in user_input:
+    return "To change the wallpaper, go to Settings > Wallpaper. Select the wallpaper you want to use."
+  elif "change password" in user_input:
+    return "To change your password, go to Settings > [Your Device Name] > Password. Enter your current password and then enter your new password."
+  elif "siri" in user_input:
+    return "To use Siri, say \"Hey Siri\" or press and hold the side button."
+  elif "notifications" in user_input:
+    return "To navigate notifications, swipe down from the top of the screen to view your notifications. Swipe left on a notification to dismiss it."
+  elif "focus" in user_input:
+    return "To turn on Focus, go to Settings > Focus. Select the Focus mode you want to turn on."
+  elif "emergency SOS" in user_input:
+    return "To use emergency SOS, press the side button and one of the volume buttons five times quickly."
+  elif "location" in user_input:
+    return "To turn on location services, go to Settings > Privacy & Security > Location Services. Turn on Location Services."
+  else:
+    return "I'm sorry, I don't understand. Can you please try again?"
+
+# Get user input.
+user_input = input("You: ")
+
+# Generate chatbot response.
+bot_response = chatbot_response(user_input)
+
+# Print chatbot response.
+print("Chatbot:", bot_response)
