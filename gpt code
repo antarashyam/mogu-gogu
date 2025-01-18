@@ -1,7 +1,17 @@
 def phone_assistant():
-    print("\n✨ Hi there! I'm here to help you with your phone. ✨\n")
-    print("💡 I can help you with things like:")
+    print("\n👋 Hi! I'm your friendly neighborhood Mogu! 🌟")
+    mood = input("How's your day going? 😊\n").lower()
     
+    if "good" in mood:
+        print("Oh, that's wonderful! 😃")
+    elif "sad" in mood:
+        print("Oh... sucks for you. 😕")
+    else:
+        print("I hope your day gets even better! 💫")
+    
+    print("\n✨ Welcome! I can help you with basic phone tasks. ✨\n")
+    
+    print("💡 You can ask about:")
     options = [
         "🔊 Volume",
         "📞 Saving Contacts",
@@ -35,13 +45,13 @@ def phone_assistant():
     
     responses = {
         "volume": "🔊 To increase volume: ,\n 1. press the volume-up button ,\n or,\n 2. go to Settings > Sounds & Haptics > Volume.",
-        "save contact": "📞 To save contact: ,\n 1. Open the Contacts app,\n 2. tap '+' to add details,\n and,\n 3. tap Save.",
-        "silent": "🔕 To put your phone on silent: ,Flip the silent switch (iPhone) or use volume controls (Android).",
-        "font size": "🔠 Go to Settings > Display & Brightness > Text Size to adjust.",
-        "hotspot": "📶 Go to Settings > Personal Hotspot > Turn it on & share the password.",
-        "face id": "🆔 Go to Settings > Face ID & Passcode or Fingerprint and follow setup steps.",
-        "brightness": "🌞 Swipe down (Control Center) and adjust brightness slider.",
-        "screenshot": "📸 Press Power + Volume-up (iPhone) or Power + Volume-down (Android).",
+        "saving contacts": "📞 To save a contact: ,\n 1. Open the Contacts app, \n2. tap '+' to add details, \n3. tap Save.",
+        "silent": "🔕 To put your phone on silent: ,\n1. Flip the silent switch (iPhone) \nor \n2. use volume controls (Android).",
+        "font size": "🔠To change the font size: \n1. Go to Settings \n2. Display & Brightness \n3. Text Size to adjust.",
+        "hotspot": "📶 To share hotspot: ,\n1. Go to Settings \n2. Personal Hotspot \n3. Turn it on & share the password.",
+        "face id": "🆔 To set up face-id: ,\n1. Go to Settings > Face ID & Passcode \nor \n2. Fingerprint and follow setup steps.",
+        "brightness": "🌞 To change brightness: ,\n1. Swipe down (Control Center) and adjust brightness slider.",
+        "screenshot": "📸 To take a screenshot: ,\n1. Press Power + Volume-up (iPhone),\n or,\n2. Power + Volume-down (Android).",
         "wifi": "📡 Go to Settings > Wi-Fi > Select a network and enter the password.",
         "airplane mode": "✈️ Swipe down (Control Center) & tap the airplane icon or go to Settings.",
         "bluetooth": "🔗 Go to Settings > Bluetooth > Turn it on & select a device to connect.",
