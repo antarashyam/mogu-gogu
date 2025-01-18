@@ -1,0 +1,69 @@
+def phone_assistant():
+    print("\n✨ Hi there! I'm here to help you with your phone. ✨\n")
+    print("💡 I can help you with things like:")
+    
+    options = [
+        "🔊 Volume",
+        "📞 Saving Contacts",
+        "🔕 Silent Mode",
+        "🔠 Font Size",
+        "📶 Hotspot",
+        "🆔 Face ID/Fingerprint",
+        "🌞 Brightness",
+        "📸 Screenshot",
+        "📡 WiFi",
+        "✈️ Airplane Mode",
+        "🔗 Bluetooth",
+        "🔦 Torch",
+        "📲 Downloading Apps",
+        "🗑️ Deleting Apps",
+        "🌍 Changing Language",
+        "🖼️ Changing Wallpaper",
+        "🔑 Changing Password",
+        "🗣️ Using Siri",
+        "🔔 Notifications",
+        "📵 Focus Mode",
+        "🚨 Emergency SOS",
+        "📍 Location Services"
+    ]
+    
+    print(" | ".join(options))
+    
+    print("\n📌 Type your request below:\n")
+    
+    query = input("🔍 Enter your request: ").lower()
+    
+    responses = {
+        "volume": "🔊 To increase volume: ,\n 1. press the volume-up button ,\n or,\n 2. go to Settings > Sounds & Haptics > Volume.",
+        "save contact": "📞 To save contact: ,\n 1. Open the Contacts app,\n 2. tap '+' to add details,\n and,\n 3. tap Save.",
+        "silent": "🔕 To put your phone on silent: ,Flip the silent switch (iPhone) or use volume controls (Android).",
+        "font size": "🔠 Go to Settings > Display & Brightness > Text Size to adjust.",
+        "hotspot": "📶 Go to Settings > Personal Hotspot > Turn it on & share the password.",
+        "face id": "🆔 Go to Settings > Face ID & Passcode or Fingerprint and follow setup steps.",
+        "brightness": "🌞 Swipe down (Control Center) and adjust brightness slider.",
+        "screenshot": "📸 Press Power + Volume-up (iPhone) or Power + Volume-down (Android).",
+        "wifi": "📡 Go to Settings > Wi-Fi > Select a network and enter the password.",
+        "airplane mode": "✈️ Swipe down (Control Center) & tap the airplane icon or go to Settings.",
+        "bluetooth": "🔗 Go to Settings > Bluetooth > Turn it on & select a device to connect.",
+        "torch": "🔦 Swipe down (Control Center) & tap the torch icon.",
+        "download app": "📲 Open App Store/Play Store, search for the app & tap Download.",
+        "delete app": "🗑️ Press & hold the app icon, then tap 'Remove' (iPhone) or 'Uninstall' (Android).",
+        "language": "🌍 Go to Settings > General > Language & Region to change language.",
+        "wallpaper": "🖼️ Go to Settings > Wallpaper & choose a new one.",
+        "password": "🔑 Go to Settings > Face ID & Passcode or Security > Change Passcode.",
+        "siri": "🗣️ Hold the power button or say 'Hey Siri' to activate Siri.",
+        "notifications": "🔔 Swipe down from the top or go to Settings > Notifications.",
+        "focus": "📵 Go to Settings > Focus & choose a mode like Do Not Disturb.",
+        "sos": "🚨 Press the power button 5 times quickly to activate Emergency SOS.",
+        "location": "📍 Go to Settings > Privacy > Location Services & turn it on."
+    }
+    
+    for key, response in responses.items():
+        if key in query:
+            print("\n✅ " + response)
+            return
+    
+    print("\n❌ Sorry, I didn't understand that. Please ask about a phone setting or feature.")
+
+# Run the chatbot
+phone_assistant()
