@@ -1,11 +1,24 @@
- = [
+def phone_assistant():
+    print("\n👋 Hi! I'm your friendly neighborhood Mogu! 🌟")
+    mood = input("How's your day going? 😊\n").lower()
+    
+    if "good" in mood:
+        print("Oh, that's wonderful! 😃")
+    elif "sad" in mood:
+        print("Oh... sucks for you. 😕")
+    else:
+        print("I hope your day gets even better! 💫")
+    
+    print("\n✨ Welcome! I can help you with basic phone tasks. ✨\n")
+    
+    print("💡 You can ask about:")
+    options = [
         "🔊 Volume",
         "📞 Saving Contacts",
         "🔕 Silent Mode",
         "🔠 Font Size",
         "📶 Hotspot",
-        "🆔 Face ID"
-        "☝️ Fingerprint",
+        "🆔 Face ID/Fingerprint",
         "🌞 Brightness",
         "📸 Screenshot",
         "📡 WiFi",
@@ -18,12 +31,15 @@
         "🖼️ Changing Wallpaper",
         "🔑 Changing Password",
         "🗣️ Using Siri",
+        "🔔 Notifications",
         "📵 Focus Mode",
         "🚨 Emergency SOS",
         "📍 Location Services"
     ]
     
     print(" | ".join(options))
+    
+    print("\n📌 Type your request below:\n")
     
     query = input("🔍 Enter your request: ").lower()
     
@@ -78,15 +94,8 @@
         if key in query:
             print("\n✅ " + response)
             return
-        else:
-            print("\n❌ Sorry, I didn't understand that!☹️ Please ask about a phone setting or feature.")
-            # Run the chatbot
-            phone_assistant()
-        
-    print("Is there anything else that I can help ypu with today?😊(y/n)")
-    answer=input("").lowercase()
-    if answer=="y":
-        phone_assistant()
-    else:
-        print("Have a great day!☀️")
-        return
+    
+    print("\n❌ Sorry, I didn't understand that. Please ask about a phone setting or feature.")
+
+# Run the chatbot
+phone_assistant()
