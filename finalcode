@@ -1,0 +1,92 @@
+ = [
+        "🔊 Volume",
+        "📞 Saving Contacts",
+        "🔕 Silent Mode",
+        "🔠 Font Size",
+        "📶 Hotspot",
+        "🆔 Face ID"
+        "☝️ Fingerprint",
+        "🌞 Brightness",
+        "📸 Screenshot",
+        "📡 WiFi",
+        "✈️ Airplane Mode",
+        "🔗 Bluetooth",
+        "🔦 Torch",
+        "📲 Downloading Apps",
+        "🗑️ Deleting Apps",
+        "🌍 Changing Language",
+        "🖼️ Changing Wallpaper",
+        "🔑 Changing Password",
+        "🗣️ Using Siri",
+        "📵 Focus Mode",
+        "🚨 Emergency SOS",
+        "📍 Location Services"
+    ]
+    
+    print(" | ".join(options))
+    
+    query = input("🔍 Enter your request: ").lower()
+    
+    responses = {
+        "volume": 
+        "🔊 To increase volume: \n 1. press the volume-up button ,\n or,\n 2. go to Settings > Sounds & Haptics > Volume.",
+        "saving contacts": 
+        "📞 To save a contact: \n 1. Open the Contacts app, \n2. tap '+' to add details, \n3. tap Save.",
+        "silent": 
+        "🔕 To put your phone on silent: \n1. Flip the silent switch (iPhone) \nor \n2. use volume controls (Android).",
+        "font size": 
+        "🔠To change the font size: \n1. Go to Settings \n2. Display & Brightness \n3. Text Size to adjust.",
+        "hotspot": 
+        "📶 To share hotspot: \n1. Go to Settings \n2. Personal Hotspot \n3. Turn it on & share the password.",
+        "face id": 
+        "🆔 To set up face-id: \n1. Go to Settings > Face ID & Passcode > Face-id \n2. follow setup steps.",
+        "fingerprint": 
+        "☝️ To set up fingerprint: \n1. Go to Settings > Face ID & Passcode \nor \n2. Fingerprint and follow setup steps.",
+        "brightness": 
+        "🌞 To change brightness: \n1. Swipe down (Control Center) \n2. adjust brightness slider.",
+        "screenshot": 
+        "📸 To take a screenshot: \n1. Press Power + Volume-up (iPhone)\n or,\n2. Power + Volume-down (Android).",
+        "wifi": 
+        "📡 To connect to a wifi: \n1. Go to Settings > Wi-Fi \n2. Select a network and enter the password.",
+        "airplane mode": 
+        "✈️ To turn on airplane mode: \n1. Swipe down (Control Center) \n2. tap the airplane icon.",
+        "bluetooth": 
+        "🔗 To turn on bluetooth: \n1. Go to Settings > Bluetooth \n2. Turn it on & select a device to connect.",
+        "torch":  
+        "🔦 To turn on the torch: \n1. Swipe down (Control Center) \n2. tap the torch icon.",
+        "downloading apps": 
+        "📲 To download an app: \n1. Open App Store/Play Store \n2. search for the app \n3. tap Download.",
+        "deleting apps": 
+        "🗑️ To delete an app: \n1. Press & hold the app icon \n2. tap 'Remove' (iPhone) or 'Uninstall' (Android).",
+        "changing language": 
+        "🌍 To change the language: \n1. Go to Settings > General > Language & Region \n2. Add the language to the top of your preferred languages.",
+        "changing wallpaper": 
+        "🖼️ To change your wallpaper: \n1. Go to Settings > Wallpaper \n2. choose a new wallpaper from your gallery or the ones provided on your phone.",
+        "changing password": 
+        "🔑 To change the phone password: \n1. Go to Settings > Face ID & Passcode(Apple) or Security(Android) \n2. click on Change Passcode.",
+        "using siri": 
+        "🗣️ To use Siri: \n1. Hold the power button \nor, \n2. say 'Hey Siri' to activate Siri.",
+        "focus mode": 
+        "📵 To enable a focus mode: \n1. Go to Settings > Focus \n2. choose a mode like Do Not Disturb.",
+        "emergency sos": 
+        "🚨 To activate SOS: \nPress the power button 5 times quickly to activate Emergency SOS.",
+        "location services": 
+        "📍 To turn on location services: \n1. Go to Settings > Privacy > Location Services \n2. toggle it on."
+    }
+    
+    for key, response in responses.items():
+        if key in query:
+            print("\n✅ " + response)
+            return
+        else:
+            print("\n❌ Sorry, I didn't understand that!☹️ Please ask about a phone setting or feature.")
+            # Run the chatbot
+            phone_assistant()
+        
+    print("Is there anything else that I can help ypu with today?😊(y/n)")
+    answer=input("").lowercase()
+    if answer=="y":
+        phone_assistant()
+    else:
+        print("Have a great day!☀️")
+        return
